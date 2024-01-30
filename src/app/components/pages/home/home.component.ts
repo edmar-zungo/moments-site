@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DogsShopServiceService } from '../dogs-shop-service.service';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DogEntity } from '../dog-entity';
 
@@ -9,7 +9,7 @@ import { DogEntity } from '../dog-entity';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, RouterLink],
   providers: [DogsShopServiceService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

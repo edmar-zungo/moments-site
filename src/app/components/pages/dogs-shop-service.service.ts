@@ -9,15 +9,16 @@ import { DogEntity } from './dog-entity';
   providedIn: 'root'
 })
 export class DogsShopServiceService {
-
+  
   apiUrl = environment.apiUrl;
   header = {'x-api-key': 'live_aMPRamkHnkbKDwuvnjrXWhH4lF7ZRR834TbERdrYFGgl4erIp5YEhbx60bPjE0zw'};
+  pages = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
 
   constructor(private http: HttpClient) { }
 
  getAllDogs(): Observable<DogEntity[]>{
 
-    return this.http.get<DogEntity[]>(`${this.apiUrl}?limit=6`, {headers: this.header});
+    return this.http.get<DogEntity[]>(`${this.apiUrl}?limit=6&page=${this.pages}`, {headers: this.header});
 
   }
 }
