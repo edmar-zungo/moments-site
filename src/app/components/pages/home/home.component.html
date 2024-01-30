@@ -1,1 +1,80 @@
-<p>home works!</p>
+<section class="banner">
+  <div>
+    <h1 class="banner-title">Os Canhorros mais fofo</h1>
+    <p class="banner-content">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries.
+    </p>
+    <br />
+    <p class="banner-content">
+      Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+      Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries.
+    </p>
+  </div>
+
+  <div>
+    <img
+      class="banner-image"
+      src="https://cdn2.thedogapi.com/images/ByCyKunBQ_1280.jpg"
+      alt=""
+      srcset=""
+    />
+  </div>
+</section>
+
+<main class="main-content">
+  <h2 class="content-title">Encontre-os aqui!</h2>
+
+  <div class="main-cards">
+    @for (item of listDogs; track item.id) {
+    <div class="main-card">
+      <h3 class="main-card-title">{{ item.name }}</h3>
+      <img class="main-card-img" src="{{ item.image.url }}" alt="Imagem" />
+    </div>
+    } @empty {
+    <li>Carregando...</li>
+    }
+  </div>
+
+  <div class="alink">
+    <a class="main-btn-link" href="#">Ver mais...</a>
+  </div>
+</main>
+
+<section class="content">
+  <h2 class="content-title">Lorem Ipsum</h2>
+
+  <p class="content-text">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the
+    1500s, when an unknown printer took a galley of type and scrambled it to
+    make a type specimen book. It has survived not only five centuries.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the
+    1500s, when an unknown printer took a galley of type and scrambled it to
+    make a type specimen book. It has survived not only five centuries.
+  </p>
+  <br>
+  <p class="content-text">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the
+    1500s, when an unknown printer took a galley of type and scrambled it to
+    make a type specimen book. It has survived not only five centuries.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  </p>
+
+</section>
+
+<section class="depoiments">
+
+  <img class="user-img" src="../../../../assets/images.jpeg" alt="Usuario Imagem">
+
+  <h3 class="user-name">Sebastião Ngunzu Cavamba</h3>
+
+  <p class="user-text">Standard dummy text ever since the
+    1500s, when an unknown printer took a galley of type and scrambled it to
+    make a type specimen book. It has survived not only five centuries.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+</section>

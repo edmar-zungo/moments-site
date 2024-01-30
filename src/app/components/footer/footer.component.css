@@ -1,0 +1,11 @@
+footer{
+    border-top: 1px solid #f8dada;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+p{
+    color: #d57b7b;
+}
