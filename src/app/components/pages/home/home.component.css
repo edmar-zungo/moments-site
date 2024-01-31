@@ -72,6 +72,7 @@
 
 .main-card:hover{
      background-color: #f57cb7;
+     cursor: pointer;
      
 
      .main-card-title{

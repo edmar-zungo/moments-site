@@ -31,12 +31,12 @@
 
   <div class="main-cards">
     @for (item of listDogs; track item.id) {
-    <div class="main-card">
+    <div class="main-card" (click)="goToGalery()">
       <h3 class="main-card-title">{{ item.name }}</h3>
       <img class="main-card-img" src="{{ item.image.url }}" alt="Imagem" />
     </div>
     } @empty {
-    <li>Carregando...</li>
+    <h3 class="loading-text">Carregando...</h3>
     }
   </div>
 

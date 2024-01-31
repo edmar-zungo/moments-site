@@ -21,4 +21,11 @@ export class DogsShopServiceService {
     return this.http.get<DogEntity[]>(`${this.apiUrl}?limit=6&page=${this.pages}`, {headers: this.header});
 
   }
+
+
+ getAllDogsNoLimit(): Observable<DogEntity[]>{
+
+  return this.http.get<DogEntity[]>(`${this.apiUrl}`, {headers: this.header});
+
+}
 }

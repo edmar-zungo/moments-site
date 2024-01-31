@@ -1,1 +1,16 @@
-<p>galery works!</p>
+<main class="container">
+
+     <h2 class="content-title">All Dog Here!</h2>
+
+     <div class="main-cards">
+          @for (item of listDogs; track item.id) {
+          <div class="main-card" (click)="goToDetalhe(item.id)">
+            <h3 class="main-card-title">{{ item.name }}</h3>
+            <img class="main-card-img" src="{{ item.image.url }}" alt="Imagem" />
+          </div>
+          } @empty {
+          <h3 class="loading-text">Carregando...</h3>
+          }
+        </div>
+
+</main>
