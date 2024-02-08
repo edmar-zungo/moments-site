@@ -19,9 +19,11 @@
   <div>
     <img
       class="banner-image"
-      src="https://cdn2.thedogapi.com/images/ByCyKunBQ_1280.jpg"
+      ngSrc="https://cdn2.thedogapi.com/images/ByCyKunBQ_1280.jpg"
       alt=""
-      srcset=""
+      priority
+      width="300"
+      height="300"
     />
   </div>
 </section>
@@ -33,7 +35,7 @@
     @for (item of listDogs; track item.id) {
     <div class="main-card" (click)="goToGalery()">
       <h3 class="main-card-title">{{ item.name }}</h3>
-      <img class="main-card-img" src="{{ item.image.url }}" alt="Imagem" />
+      <img class="main-card-img" ngSrc="{{ item.image.url }}" alt="Imagem" width="280" height="280" />
     </div>
     } @empty {
     <h3 class="loading-text">Carregando...</h3>

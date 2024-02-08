@@ -6,7 +6,8 @@
           @for (item of listDogs; track item.id) {
           <div class="main-card" (click)="goToDetalhe(item.id)">
             <h3 class="main-card-title">{{ item.name }}</h3>
-            <img class="main-card-img" src="{{ item.image.url }}" alt="Imagem" />
+            <img class="main-card-img" ngSrc="{{ item.image.url }}" alt="Imagem" priority width="280"
+            height="280"/>
           </div>
           } @empty {
           <h3 class="loading-text">Carregando...</h3>
